@@ -1,0 +1,79 @@
+<head>
+ <%= stylesheet_link_tag "article", "data-turbo-track": "reload" %>
+</head>
+
+<body>
+    <div class="main">
+        <div class="encabezado">
+            <h3 class="title">Inscripción Congreso 
+            <br> Ruby on Rails 2023</h3>
+            <p> La ciudad anfitriona de esta edición será Alicante. ¡Bienvenidos a la Ciudad de la Luz! </p>
+        </div>
+       
+        <div class="form-div">
+            <%= form_with do |form| %>
+                <div class="nombre-apellido">
+                    <%= form.label :nombre, "Nombres" %>
+                    <%= form.text_field :nombre %>     
+
+                    <%= form.label :apellido, "Apellidos" %>
+                    <%= form.text_field :apellido %>        
+                </div>
+
+                <div class="fecha">
+                    <%= form.label :fecha, "Fecha de nacimiento" %>
+                    <%= form.date_field :fecha %>
+
+                    <%= form.label :lugar, "Lugar de nacimiento" %>
+                    <%= form.text_field :lugar%>
+                </div>
+
+                <div class="correo">
+                    <%= form.label :correo, "Correo" %>
+                    <%= form.text_field :correo %>        
+
+                    <%= form.label :movil, "Móvil" %>
+                    <%= form.phone_field :Móvil %>
+                </div>
+                
+
+                <div class="ciudades">
+                    <%= form.label :pais, "País" %>
+                    <%= form.text_field :pais %>     
+
+                    <%= form.label :ciudad, "Ciudad / Población" %>
+                    <%= form.text_field :aciudad%>  
+                </div>
+
+                <div class="empresa">
+                    <%= form.label :empresa, "¿Vienes por trabajo?" %>
+                    <%= form.radio_button :si, "Si" %>
+                    <%= form.label :si, "Si" %>
+                    <%= form.radio_button :no, "No" %>
+                    <%= form.label :no, "No" %>
+                </div>
+
+                <div class="check">
+                    <%= form.check_box :condiciones%>
+                    <%= form.label :condiciones, "Acepto los Términos y Condiciones" %>
+                </div>
+
+               <div class="btn-div">
+                 <%= button_tag '¡Quiero apuntarme!',  type:'button', class: 'form-btn' %>             
+               </div>
+            <% end %> 
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Developed by Mayra Barros - Prueba técnica LeadingDev, Ruby on Rails.</p>
+    </footer>
+
+
+
+   
+</body>
+
+
+
