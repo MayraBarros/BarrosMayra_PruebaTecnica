@@ -13,36 +13,49 @@
         <div class="form-div">
             <%= form_with do |form| %>
                 <div class="nombre-apellido">
-                    <%= form.label :nombre, "Nombres" %>
+                   <div class="form-nombre">
+                     <%= form.label :nombre, "Nombres" %>
                     <%= form.text_field :nombre %>     
+                   </div>
 
+                  <div class="form-apellido">
                     <%= form.label :apellido, "Apellidos" %>
-                    <%= form.text_field :apellido %>        
+                    <%= form.text_field :apellido %>  
+                  </div>      
                 </div>
 
                 <div class="fecha">
-                    <%= form.label :fecha, "Fecha de nacimiento" %>
-                    <%= form.date_field :fecha %>
-
-                    <%= form.label :lugar, "Lugar de nacimiento" %>
-                    <%= form.text_field :lugar%>
+                    <div class="form-fecha">
+                        <%= form.label :fecha, "Fecha de nacimiento" %>
+                        <%= form.date_field :fecha %>
+                    </div>
+                    <div class="form-lugar">
+                        <%= form.label :lugar, "Lugar de nacimiento" %>
+                        <%= form.text_field :lugar%>
+                    </div>                    
                 </div>
 
                 <div class="correo">
-                    <%= form.label :correo, "Correo" %>
-                    <%= form.text_field :correo %>        
-
-                    <%= form.label :movil, "Móvil" %>
-                    <%= form.phone_field :Móvil %>
+                    <div class="form-correo">
+                        <%= form.label :correo, "Correo" %>
+                        <%= form.text_field :correo %>   
+                    </div>
+                    <div class="form-movil">
+                        <%= form.label :movil, "Móvil" %>
+                        <%= form.phone_field :Móvil %>
+                    </div>     
                 </div>
                 
-
                 <div class="ciudades">
-                    <%= form.label :pais, "País" %>
-                    <%= form.text_field :pais %>     
+                    <div class="form-pais">
+                        <%= form.label :pais, "País" %>
+                        <%= form.text_field :pais %>    
+                    </div> 
 
-                    <%= form.label :ciudad, "Ciudad / Población" %>
-                    <%= form.text_field :aciudad%>  
+                    <div class="form-provincia">
+                        <%= form.label :ciudad, "Provincia" %>
+                        <%= form.text_field :aciudad%>  
+                    </div>
                 </div>
 
                 <div class="empresa">
@@ -59,20 +72,24 @@
                 </div>
 
                <div class="btn-div">
-                 <%= button_tag '¡Quiero apuntarme!',  type:'button', class: 'form-btn' %>             
+                 <%# <%= button_tag '¡Quiero apuntarme!',  type:'button', class: 'form-btn' %>  
+                 <%= link_to "Quiero apuntarme", "/exitoso" %>
                </div>
             <% end %> 
+        </div>
+
+        <div class="sponsor">
+            <p>Sponsor Oficial:</p>
+            <%= image_tag("leading.jpeg", class: "img-sponsor") %>
         </div>
 
     </div>
 
     <footer>
         <p>Developed by Mayra Barros - Prueba técnica LeadingDev, Ruby on Rails.</p>
+      
     </footer>
 
-
-
-   
 </body>
 
 

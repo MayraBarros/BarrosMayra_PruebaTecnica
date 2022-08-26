@@ -10,8 +10,7 @@
     padding: 30px;
     border-radius: 10px;
     background-color: white;
-    text-align: center;
-   
+    text-align: center;   
 }
 
 .main{
@@ -49,12 +48,16 @@
 .fecha{
     padding: 5px;
     padding-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .nombre-apellido input,
 .ciudades input,
 .correo input,
-.fecha input{
+.fecha input,
+.empresa input{
     border: none;
     border-bottom: 1px solid black;
     margin-left: 10px;
@@ -92,7 +95,7 @@ footer p{
     text-align: center;
 }
 
-.form-btn{
+.btn-div a{
     border: none;
     background: linear-gradient(to right, #089ACF 0%, #44CFAF 100%);
     text-align: center;
@@ -101,6 +104,60 @@ footer p{
     border-radius: 10px;
     margin: auto;
     cursor: pointer;
+    text-decoration: none;
 }
 
+.sponsor{
+    margin-top: 50px;
+}
+
+.sponsor p{
+    color: white;
+    font-size: 15px ;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.img-sponsor{
+    width: 150px;
+}
+
+@media (max-width: 480px){
+
+    .encabezado p{
+        padding: 10px 50px;
+    }
+
+    .form-div{
+        text-align: left;
+    }
+
+    .nombre-apellido,
+    .ciudades,
+    .correo,
+    .fecha{
+        flex-direction: column;
+        padding-bottom: 0;
+    }
+
+    .form-nombre,
+    .form-apellido,
+    .form-fecha,
+    .form-lugar,
+    .form-correo,
+    .form-movil,
+    .form-pais,
+    .form-provincia{
+        padding: 8px;
+    }
+
+    .form-btn{
+        font-size: 20px;
+    }
+
+    .img-sponsor{
+        width: 100px;
+    }
+
+}
 

@@ -1,0 +1,28 @@
+.main-exitoso{
+    background: rgb(49,165,246);
+    background: linear-gradient(207deg, rgba(49,165,246,1) 0%, rgba(111,203,191,1) 58%);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-exitoso h1{
+    color: white;
+    font-size: 40px ;
+    padding-bottom: 20px;
+}
+
+.main-exitoso p{
+    color: white;
+    font-size: 20px;
+}
+
+@media (max-width: 480px){
+    .main-exitoso p{
+        text-align: center;
+        font-size: 15px;
+        padding: 0 20px;
+    }
+}
